@@ -33,7 +33,7 @@ function SignUp() {
 
     try {
         const { confirmPassword, ...payload } = studentData;
-        await api.post("/signup", payload);
+        await api.post("/auth/signup", payload);
         alert("Registration Successful!");
         navigate("/");
     } catch (error) {

@@ -24,7 +24,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const { data } = await api.post("/login", loginData);
+      const { data } = await api.post("/auth/login", loginData);
 
       if (data.role === "admin") {
         localStorage.removeItem("currentStudent");
